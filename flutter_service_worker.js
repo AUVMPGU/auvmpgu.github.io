@@ -3,29 +3,29 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "232f2e1a2abbf3cab112b9e430975f05",
-"index.html": "4a638a39b9a7c487b9bd87292fe4bd61",
-"/": "4a638a39b9a7c487b9bd87292fe4bd61",
-"main.dart.js": "d23cdef2145f9e6b01ff819b3f1310e2",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "58d23cf5a8574cfaedeac18c425c0748",
-"assets/AssetManifest.json": "b6ade44b5df6ed419b577e08ed033129",
-"assets/NOTICES": "ff6fd0e36a8b05c9c7f6203ba6f715e0",
-"assets/FontManifest.json": "021bde7ce433ed49f604637879dfd902",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/assets/telegram.png": "c273361bb072a62d0a05365c14c44f15",
+  "assets/AssetManifest.json": "b9827bb0a379fbafa8542820cc2b24df",
 "assets/assets/auvmpgu.png": "b3da9d0117b149643fd3e8aec6043f51",
+"assets/assets/facebook.png": "021ada146ffb7c1753557ff29618d04c",
+"assets/assets/FontManifest.json": "7818e59ad92ece62bcc811177badf03a",
+"assets/assets/fonts/MaterialIcons-Regular.ttf": "8ef52a15e44481b41e7db3c7eaf9bb83",
+"assets/assets/GoogleSansRegular.ttf": "b5c77a6aed75cdad9489effd0d5ea411",
 "assets/assets/instagram.png": "26631a4043b14dff84180bdf51c3cacb",
 "assets/assets/moon.png": "20954dc7b8e9232c966118f2a12126dd",
-"assets/assets/GoogleSansRegular.ttf": "b5c77a6aed75cdad9489effd0d5ea411",
-"assets/assets/FontManifest.json": "5dab88ca99baef51960ce2776e567b49",
-"assets/assets/twitter.png": "8f35a40403a84631c4125c4f1859c7a6",
 "assets/assets/sun.png": "df2eec3b58e0692d57c2fe42f2eefcda",
-"assets/assets/fonts/MaterialIcons-Regular.ttf": "8ef52a15e44481b41e7db3c7eaf9bb83",
-"assets/assets/facebook.png": "021ada146ffb7c1753557ff29618d04c"
+"assets/assets/telegram.png": "c273361bb072a62d0a05365c14c44f15",
+"assets/assets/twitter.png": "8f35a40403a84631c4125c4f1859c7a6",
+"assets/FontManifest.json": "021bde7ce433ed49f604637879dfd902",
+"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
+"assets/NOTICES": "68af59fae97551bdf62f7680312564d7",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "b14fcf3ee94e3ace300b192e9e7c8c5d",
+"favicon.png": "4a95b1039211e47a4d78f118b47946ef",
+"icons/Icon-192.png": "6cdda3cab6181f6a6f2daf09266bd7e3",
+"icons/Icon-512.png": "454bfc85cd687da4d7b63757c750fbf2",
+"index.html": "c1ba97057da816c259ec63b01839346c",
+"/": "c1ba97057da816c259ec63b01839346c",
+"main.dart.js": "10c9cfd75c1e13bfb2cfcce51d6a2dea",
+"manifest.json": "23a01deec5d770513356872b9e75002c",
+"version.json": "232f2e1a2abbf3cab112b9e430975f05"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -169,7 +169,7 @@ async function downloadOffline() {
     }
     currentContent[key] = true;
   }
-  for (var resourceKey in Object.keys(RESOURCES)) {
+  for (var resourceKey of Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
       resources.push(resourceKey);
     }
